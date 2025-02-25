@@ -1,0 +1,23 @@
+.carre {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}
+
+.rond {
+    border-radius: 50%;
+    background-color: red;
+}
+
+#counter {
+
+}
+
+.defaut::after {
+    content: ' (' attr(class) ')';
+
+}
+
+.new {
+    content: ' (' attr(class) ')';
+}
