@@ -1,3 +1,10 @@
+* {
+    box-sizing: border-box;
+    color: pink;
+}
+
+html, body {background: black;}
+
 .carre {
     width: 100px;
     height: 100px;
@@ -9,8 +16,53 @@
     background-color: red;
 }
 
-#counter {
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+form {
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+}
+
+#joke {
+    display: block;
+    width: 800px;
+    height: 200px;
+    justify-items: center;
+    padding: 50px;
+
+}
+
+small {
+    padding-top: 150px;
+}
+
+.characters {
+    padding: 20px 100px;
+    background-color: blue;
+    color: white;
+    font-size: 20px;
+    margin: 1%;
+}
+
+.choices {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.exos {
+    display: grid;
+    grid-template-columns: repeat(2, 99999999999999fr);
+}
+
+#dodamathbutton {
+    background: red;
+    font-size: 32px;
 }
 
 .defaut::after {
@@ -20,4 +72,17 @@
 
 .new {
     content: ' (' attr(class) ')';
+}
+
+#input01 {
+
+}
+#input02 {
+
+}
+#toad {
+    padding: 50px;
+    background-color: red;
+    margin: auto;
+    display: none;
 }
