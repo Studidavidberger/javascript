@@ -48,6 +48,12 @@ small {
     color: white;
     font-size: 20px;
     margin: 1%;
+    outline: white solid 2px;
+    border-radius: 5px;
+}
+
+.characters:hover {
+    background-color: cornflowerblue;
 }
 
 .choices {
@@ -81,8 +87,13 @@ small {
 
 }
 #toad {
-    padding: 50px;
-    background-color: red;
-    margin: auto;
+    padding: 20px;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
     display: none;
 }

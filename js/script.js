@@ -140,19 +140,12 @@ math.addEventListener('click', function () {
         console.log("resultat = ", _result);
     }
     
-    // creer un element li
-    const node = document.createElement("li");
-    // CCrer un texte de l'element
-    const textnode = document.createTextNode("Water");
-    // Faire apparaitre l'element li
-    node.appendChild(textnode);
-    // Faire apparaitre le li a la liste
-    document.getElementById("myList").appendChild(node);
 
-    // Afficher le resultat
-    const texttoad = document.createTextNode(_result);
-    // Faire apparaitre l'element li
-    _toad.append(texttoad);
+
+    // Derniere etape Afficher le resultat
+    // Faire apparaitre l'element div en changeant la classe
+    _toad.classList.remove('hide');
+    document.getElementById("toad").innerHTML=_result;
 })
 
 // Afficher l'entiereté des variables
