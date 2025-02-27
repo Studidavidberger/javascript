@@ -149,7 +149,7 @@ math.addEventListener('click', function () {
 })
 
 // Afficher l'entiereté des variables
-const click_here = document.getElementById('click_here');
+const click_here = document.getElementById('dodamathbutton');
 click_here.addEventListener('click', function () {
     console.log("multiplier=", multiply_var);
     console.log("diviser=", divide_var);

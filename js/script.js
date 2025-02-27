@@ -145,7 +145,7 @@ math.addEventListener('click', function () {
     // Derniere etape Afficher le resultat
     // Faire apparaitre l'element div en changeant la classe
     _toad.classList.remove('hide');
-    document.getElementById("toad").innerHTML=_result;
+    document.getElementById("toad").innerHTML = _result;
 })
 
 // Afficher l'entiereté des variables

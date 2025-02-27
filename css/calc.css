@@ -43,7 +43,8 @@ small {
 }
 
 .characters {
-    padding: 20px 200px;
+    padding: 2%;
+    width: 500px;
     background-color: blue;
     color: white;
     font-size: 20px;
