@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/calc.css">
     <title> The Javascript language</title>
 </head>
 <body class="container">
@@ -20,65 +20,72 @@
     <input class="characters" type="number" id="luigi" placeholder="Entrez le deuxieme nombre">
 
     <!-- CHECK BOXES !! -->
-        <label for="multiply">
-            <input type="checkbox" value="checkbox" id="multiply">
-            multiplying
-        </label>
+    <label for="multiply">
+        <input type="checkbox" value="checkbox" id="multiply">
+        multiplying
+    </label>
 
-        <label for="divide">
-            <input type="checkbox" value="checkbox" id="divide">
-            dividing
-        </label>
+    <label for="divide">
+        <input type="checkbox" value="checkbox" id="divide">
+        dividing
+    </label>
 
-        <label for="minus">
-            <input type="checkbox" value="checkbox" id="minus">
-            substracting
-        </label>
+    <label for="minus">
+        <input type="checkbox" value="checkbox" id="minus">
+        substracting
+    </label>
 
-        <label for="plus">
-            <input type="checkbox" value="true" id="plus">
-            additionning
-        </label>
+    <label for="plus">
+        <input type="checkbox" value="true" id="plus">
+        additionning
+    </label>
 
-        <label for="power">
-            <input type="checkbox" value="checkbox" id="power">
-            square root
-        </label>
+    <label for="power">
+        <input type="checkbox" value="checkbox" id="power">
+        square root
+    </label>
 
-<div id="click_here">
-    <p>clique ici pour afficher toutes les variables.</p>
-    <p id="dodamathbutton" >Calculer les maths</p>
-    <div class="hide characters" id="toad">result</div>
+    <div id="click_here">
+        <p >clique ici pour afficher<br> toutes les variables.</p>
+        <div class="hide characters" id="toad">result</div>
+        <p id="dodamathbutton"  class="button">Calculer les maths</p>
+        <input min="1" max="20" class="characters" type="number" id="exo_button" placeholder="Exercice numero 1-20">
 
-</div>
+    </div>
     </div>
 
-    <!-- AUTRE -->
-<div class="container">
-    <span>ici ont ete terminés les exercices</span>
-    <div class="exos">
-        <span>1✅</span>
-        <span>2✅</span>
-        <span>3⭕</span>
-        <span>4⭕</span>
-        <span>5⭕</span>
-        <span>6⭕</span>
-        <span>7⭕</span>
-        <span>8⭕</span>
-        <span>9⭕</span>
-        <span>10⭕</span>
-        <span>11⭕</span>
-        <span>12⭕</span>
-        <span>13⭕</span>
-        <span>14⭕</span>
-        <span>15⭕</span>
-        <span>16⭕</span>
-        <span>17⭕</span>
-        <span>18⭕</span>
-        <span>19⭕</span>
-        <span>20⭕</span>
+
+    <img id="source2" src="source.html">
+    <div class="container">
+        <span>ici on peut retrouver le synopsis de chaque exercice</span>
+
+        <div class="exos">
+
+            <span> Exercice 1 :   afficher son carré </span>
+            <span> Exercice 2 :   afficher leur somme </span>
+            <span> Exercice 3 :   afficher tous les nombres pairs compris entre 1 et ce nombre </span>
+            <span> Exercice 4 :   afficher tous les nombres premiers compris entre 1 et ce nombre </span>
+            <span> Exercice 5 :   afficelr a table de multiplication de ce nombre </span>
+            <span> Exercice 6 :   afficher sa factorielle </span>
+            <span> Exercice 7 :   afficher son inverse </span>
+            <span> Exercice 8 :   afficher son plus grand diviseur </span>
+            <span> Exercice 9 :   afficher son plus petit diviseur </span>
+            <span> Exercice 10 :  afficher son pgcd avec 10. </span>
+            <span> Exercice 11 :  afficher son ppcm avec 10 </span>
+            <span> Exercice 12 :  afficher le plus grand commun diviseur de ces deux nombres </span>
+            <span> Exercice 13 :  afficher le plus petit commun multiple de ces deux nombres </span>
+            <span> Exercice 14 :  afficher sa suite de Fibonacci jusqu'à ce nombre </span>
+            <span> Exercice 15 :  afficher sa suite de Syracuse jusqu'à ce nombre </span>
+            <span> Exercice 16 :  afficher sa suite de Collatz jusqu'à ce nombre </span>
+            <span> Exercice 17 :  afficher sa suite de Lucas jusqu'à ce nombre </span>
+            <span> Exercice 18 :  afficher sa suite de Pell jusqu'à ce nombre </span>
+            <span> Exercice 19 :  afficher sa suite de Fibonacci généralisée jusqu'à ce nombre. </span>
+            <span> Exercice 20 :  afficher sa suite de Lucas généralisée jusqu'à ce nombre </span>
+
+        </div>
     </div>
-</div>
+    <p>
+  </p>
 
     <small> website created my David BERGER <br>
         with lemons coffee and a lot of nightcore.</small>
@@ -86,7 +93,8 @@
 </form>
 
 
-<script src="js/script.js"></script>
+<script src="js/change.js"></script>
+<script id="script" src="js/exo_1.js"></script>
 
 
 </body>

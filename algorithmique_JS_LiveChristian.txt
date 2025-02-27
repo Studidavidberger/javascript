@@ -1,6 +1,5 @@
 Exercice 1 :   afficher son carré.
 Exercice 2 :   afficher leur somme.
-
 Exercice 3 :   afficher tous les nombres pairs compris entre 1 et ce nombre.
 Exercice 4 :   afficher tous les nombres premiers compris entre 1 et ce nombre.
 Exercice 5 :   afficelr a table de multiplication de ce nombre.
