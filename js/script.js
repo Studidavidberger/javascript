@@ -12,12 +12,19 @@ document.addEventListener("DOMContentLoaded", function() {
     // RECUPERER ELEMENT EXERCICES
     const exercices = document.getElementById('exercices');
     // RECUPERER VALEUR EXERCICES
-    let exercice = Number(exercices.value);
+    let exercice = 1;
+    // RECUPERER L'ELEMENT SCRIPT
+    const script = document.getElementById('script');
+    
+    
     // Ecouter les changement d'exercice
     exercices.addEventListener("change", function() {
         
         // Initaliser variable MSG
         let msg = document.getElementById("exercices").innerHTML;
+
+        // CHANGER LE NUMERO OD'EXERCICE
+        exercice = Number(exercices.value);
 
         // CHANGER DE REPERTOIRE
         document.getElementById('script').src = `js/exo_${exercice}.js`;
@@ -46,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if ( exercice === 20 ) {document.getElementById('msg').innerHTML = "suite de Lucas généralisée jusqu'à ce nombre";}
         alert(`
                 Exercice ${exercice}\n
-                script ${script.src}\n
+                repertoire du script ${script.src}\n
                 
          `);
             console.log(`
@@ -60,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function() {
     })
 })
     // ON CLICK LISTENER
-    
+
 
 //DOM LOADED
 
