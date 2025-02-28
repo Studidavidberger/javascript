@@ -1,162 +1,78 @@
-/* Exercice 1 : Ecrire un algorithme qui demande à l'utilisateur de saisir un nombre 
-                         et qui affiche son carré    /
+// Creer un evenement on click qui change la source du fichier JS
 
-// MON PSEUDO CODE DAVID BERGER
-* initier a zero le premeir nombre
-* initier a zero le deuxieme nombre
-* 
-* verifier quel operation est a calculer
-* 
-* recuperer l'element du premier nombre
-* recuperer l'element du deuxieme nombre
-* 
-* appliquer la valeure aux deux variable lors 
-* de l'evement click
-* 
-* faire le calcul
-* 
-* faire apparaitre un element resultat avec le resultat
-* * */
+// creer une variable string contenant le fichier JS
+// recuperer l'element div "prochain exercice"
+// recuperer l'element script
+// modifier le contenu de l'ement script src lors d'un on click
 
 
-// recupere la checkbox
-const multiply = document.getElementById('multiply');
-const divide = document.getElementById('divide');
-const minus = document.getElementById('minus');
-const plus = document.getElementById('plus');
-const power = document.getElementById('power');
-
-// Decocher toutes les checkbocses
-multiply.checked = false
-divide.checked = false
-plus.checked = false
-minus.checked = false
-power.checked = false
-
-// recuperer l'etat des checkbocses
-let multiply_var = multiply.checked;
-let divide_var = divide.checked;
-let minus_var = minus.checked;
-let plus_var = plus.checked;
-let power_var = power.checked;
-
-// initier a zero les deux nombres de l'utilisateur
-let mario = 0;
-let luigi = 0;
-let _result = 0;
-
-// recuperer les textarea
-const bowser = document.getElementById('mario');
-const peach = document.getElementById('luigi');
-
-// recuperer l'element resultat.
-const _toad = document.getElementById('toad');
-
-// Ecoute les changement d'etats TRUE ou FALSE de chaque checkbox.
-// CHECKBOX MULLTPLIER
-multiply.addEventListener('change', function () {
-    multiply_var = multiply.checked;
-
-    // Afficher le changement d'état.
-    console.log("multiplier=", multiply_var);
-})
-
-// CHECKBOX DIVISER
-divide.addEventListener('change', function () {
-    divide_var = divide.checked;
-
-    // Afficher le changement d'état.
-    console.log("diviser=", divide_var);
-})
-
-// CHECKBOX ADDITIONNER
-plus.addEventListener('change', function () {
-    plus_var = plus.checked;
-
-    // Afficher le changement d'état.
-    console.log("additionner=", plus_var);
-})
-
-// CHECKBOX SOUSTRAIRE
-minus.addEventListener('change', function () {
-    minus_var = minus.checked;
-
-    // Afficher le changement d'état.
-    console.log("soustraire=", minus_var);
-})
-
-// CHECKBOX AU CARRE
-power.addEventListener('change', function () {
-    power_var = power.checked;
-
-    // Afficher le changement d'état.
-    console.log("au carré", power_var);
-})
-
-// recuperer les deux valeures donnée par l'utilisateur
-bowser.addEventListener('change', function () {
-    mario = document.getElementById('mario').value;
-    console.log("Tu viens d'ecrire", mario);
-})
-peach.addEventListener('change', function () {
-    luigi = document.getElementById('luigi').value;
-    console.log("Tu viens d'ecrire", luigi);
-})
-
-// Faire le calcul choisi par l'utilisateur d'apres
-// les nombres choisi ains que l'operation
-const math = document.getElementById('dodamathbutton');
-math.addEventListener('click', function () {
+// Attendre que le DOM est complement chargé
+document.addEventListener("DOMContentLoaded", function() {
     
-    // Verifier quelle operation a ete choisie par l'utilisateur
-    
-    if (multiply.checked)
-    {
-        _result = mario * luigi;
-        console.log("resultat = ", _result);
-    }
-    
-    if(divide.checked)
-    {
-        _result = mario / luigi;
-        console.log("resultat = ", _result);
-    }
-    
-    if(plus.checked)
-    {
-        _result = mario + luigi;
-        console.log("resultat = ", _result);
-    }
-    
-    if(minus.checked)
-    {
-        _result = mario - luigi;
-        console.log("resultat = ", _result);
-    }
-    
-    if(power.checked)
-    {
-        _result = mario * mario;
-        console.log("resultat = ", _result);
-    }
+    // RECUPERER ELEMENT EXERCICES
+    const exercices = document.getElementById('exercices');
+    // RECUPERER VALEUR EXERCICES
+    let exercice = Number(exercices.value);
+    // Ecouter les changement d'exercice
+    exercices.addEventListener("change", function() {
+        
+        // Initaliser variable MSG
+        let msg = document.getElementById("exercices").innerHTML;
+
+        // CHANGER DE REPERTOIRE
+        document.getElementById('script').src = `js/exo_${exercice}.js`;
+        document.getElementById('opensource').src = `js/exo_${exercice}.js`;
+        
+        // CHANGER LE MESSAGE DESCRIPTIF
+        if ( exercice === 1 ) {document.getElementById('msg').innerHTML = "calculer le carré";}
+        if ( exercice === 2 ) {document.getElementById('msg').innerHTML = "afficher la somme";}
+        if ( exercice === 3 ) {document.getElementById('msg').innerHTML = "nombre pairs";}
+        if ( exercice === 4 ) {document.getElementById('msg').innerHTML = "nombre premier";}
+        if ( exercice === 5 ) {document.getElementById('msg').innerHTML = "table de multiplication";}
+        if ( exercice === 6 ) {document.getElementById('msg').innerHTML = "factorielle";}
+        if ( exercice === 7 ) {document.getElementById('msg').innerHTML = "son inverse";}
+        if ( exercice === 8 ) {document.getElementById('msg').innerHTML = "plus grand diviseur";}
+        if ( exercice === 9 ) {document.getElementById('msg').innerHTML = "plus petit diviseur";}
+        if ( exercice === 10 ) {document.getElementById('msg').innerHTML = "pgcd avec 10";}
+        if ( exercice === 11 ) {document.getElementById('msg').innerHTML = "ppcm avec 10";}
+        if ( exercice === 12 ) {document.getElementById('msg').innerHTML = "plus grand commun diviseur de ces deux nombres";}
+        if ( exercice === 13 ) {document.getElementById('msg').innerHTML = "plus petit commun multiple de ces deux nombres";}
+        if ( exercice === 14 ) {document.getElementById('msg').innerHTML = "suite de Fibonacci jusqu'à ce nombre";}
+        if ( exercice === 15 ) {document.getElementById('msg').innerHTML = "suite de Syracuse jusqu'à ce nombre";}
+        if ( exercice === 16 ) {document.getElementById('msg').innerHTML = "suite de Collatz jusqu'à ce nombre";}
+        if ( exercice === 17 ) {document.getElementById('msg').innerHTML = "suite de Lucas jusqu'à ce nombre";}
+        if ( exercice === 18 ) {document.getElementById('msg').innerHTML = "suite de Pell jusqu'à ce nombre";}
+        if ( exercice === 19 ) {document.getElementById('msg').innerHTML = "suite de Fibonacci généralisée jusqu'à ce nombre";}
+        if ( exercice === 20 ) {document.getElementById('msg').innerHTML = "suite de Lucas généralisée jusqu'à ce nombre";}
+        alert(`
+                Exercice ${exercice}\n
+                script ${script.src}\n
+                
+         `);
+            console.log(`
+                msg= ${ msg }
+                msg typeof = ${ typeof msg }\n
+                exercice = ${ exercice }
+                exercice typeof = ${ typeof exercice }
+               
+        `)
+
+    })
+})
+    // ON CLICK LISTENER
     
 
+//DOM LOADED
 
-    // Derniere etape Afficher le resultat
-    // Faire apparaitre l'element div en changeant la classe
-    _toad.classList.remove('hide');
-    document.getElementById("toad").innerHTML = _result;
-})
+/*
+*         // PROBLEME 1
+        // dans la condition IF, exercice n'est pas un entier
+        // SOLUTION 1
+        // voir le type de variable
+        // console.log( typeof exercice );
+        // puis convertir exercice en un entier
+        // Number( exercice )
 
-// Afficher l'entiereté des variables
-const click_here = document.getElementById('click_here');
-click_here.addEventListener('click', function () {
-    console.log("multiplier=", multiply_var);
-    console.log("diviser=", divide_var);
-    console.log("additionner=", plus_var);
-    console.log("soustraire=", minus_var);
-    console.log("monter a la muissance de=", power_var);
-    console.log("1er nombre = ", mario);
-    console.log("2eme nombre = ", luigi);
-    console.log("resultat = ", _result);
-})
+*
+*
+* */
