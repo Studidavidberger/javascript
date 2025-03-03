@@ -7,5 +7,6 @@ git status
 git add -A
 git commit -m "BOT AUTOMATION~"
 git push
+xdg-open https://github.com/Studidavidberger/javascript
 
 exit 0
