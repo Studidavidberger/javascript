@@ -1,57 +1,50 @@
-// EXO 1 CALCULER LE CARRE
-
-/* Exercice 1 : Ecrire un algorithme qui calcule 
-    le carré d'un nombre donné
-    
-// MON PSEUDO CODE DAVID BERGER
+/*
+* Exercice 1 : Ecrire un algorithme qui calcule le carre d'un nombre donne
 *
-* recuperer le bouton value 
-* initialiser la variable number a zero
-* faire le calcul on click
-* 
+* PSEUDOCODE
+*
+* BEGIN
+*
+* Declarer les elements HTML button, debug et output
+* Declare variables number, and result
+*
+* number = INPUT num "Entrez votre nombre"
+*
+* number = number * number
+*
+* OUTPUT number
+*
 * * */
 
+// DECLARER LES ELEMENTS HTML
+const button = document.getElementById('button');
+const debug = document.getElementById('debug');
+const output = document.getElementById('output');
 
-
-// DECLARER LE BOUTON D'ENTRÉE
-const button = document.getElementById('mario');
-
-// DECLARER LA VARIABLE
-let number = document.getElementById('mario').value;
-
-// DECLARER LE BOUTON RESULTAT
-const result = document.getElementById('result');
-
-// DECLARER LA VARIABLES RESULT
-let _result = 0;
+// DECLARER LES VARIABLE number, et _result
+let number = 0;
+let result = 0;
 
 
 // RECUPERER LA VALEURE DE LA VARIABLE
 button.addEventListener('change', function () {
-    number = document.getElementById('mario').value;
+    number = document.getElementById('button').value;
     console.log("Tu viens d'ecrire", number);
 })
 
-// Faire le calcul choisi on click.
-const math = document.getElementById('msg');
-math.addEventListener('click', function () {
-        _result = number * number;
-        alert(`
-        valeure=${number}
-        result=${_result}
-        
-        `)
 
-    // AFFICHER RESULTAT
+// CALCULER LE CARRE.
+output.addEventListener('click', function () {
+    result = number * number;
+    console.log(result);
+
+    // AFFICHER LE RESULTAT
     result.classList.remove('hide');
-    document.getElementById("result").innerHTML=_result;
+    document.getElementById("result").innerHTML = result;
 })
 
+
 // AFFICHER LES VARIABLES
-const debug = document.getElementById('debug');
 debug.addEventListener('click', function () {
-    alert(`
-    premiere valeure=${number}
-    resultat=${_result}
-    `)
+    console.log(result);
 })

@@ -2,6 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
@@ -9,23 +10,23 @@
 </head>
 <body class="container">
 <h1> The Javascript language</h1>
-<p id="debug" class="button">clique ici pour afficher<br> toutes les variables.</p>
-
-<div id="exo1"></div>
 
 <!-- CALCULATRICE -->
+<div class="user_area">
+    <p>Cette application web, montre comment une calculatrice codé en Javascript fonctionne.</p>
+    <p id="debug" class="button">clique ici pour afficher<br> toutes les variables.</p>
+    <input id="button" class="characters" type="number" placeholder="Entrez le premier nombre">
+    <input id="button2" class="characters" type="number" placeholder="Entrez le deuxieme nombre">
+    <input id="exercices" min="1" max="20" class="characters" type="number" placeholder="Exercice numero 1-20">
+    <p id="calc" class="button">Aucun exercice choisi.</p>
+    <div class="hide characters" id="output">result</div>
 
-    <!-- NOMBRE QUE L'UTILISATEUR SOUHAITE CALCULER -->
-    <input class="characters" type="number" id="mario" placeholder="Entrez le premier nombre">
-    <input class="characters" type="number" id="luigi" placeholder="Entrez le deuxieme nombre">
+</div>
+
 
     <div class="container">
-        <input id="exercices" min="1" max="20" class="characters" type="number" placeholder="Exercice numero 1-20">
-        // LE RESULTAT N'APPARAIT PAS LORS DU CLICK
-        <div class="hide characters" id="result">result</div>
     </div>
     </div>
-    <p id="msg" class="button">Calculer le carré</p>
     <iframe id="opensource" src="js/exo_1.js"></iframe>
 
 
