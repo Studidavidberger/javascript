@@ -56,6 +56,13 @@ small {
     background-color: cornflowerblue;
 }
 
+.user_area {
+    display: flex;
+    flex-direction: column;
+    width: 650px;
+    text-align: center;
+}
+
 iframe {
     border-radius: 20px;
     width: 75%;

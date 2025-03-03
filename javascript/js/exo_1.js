@@ -1,9 +1,11 @@
 /*
+* Exercice 1 : Ecrire un algorithme qui calcule le carre d'un nombre donne
+*
 * PSEUDOCODE
-* Exercice 1 : Ecrire un algorithme qui calcule le carré d'un nombre donné
 *
 * BEGIN
 *
+* Declarer les elements HTML button, debug et output
 * Declare variables number, and result
 *
 * number = INPUT num "Entrez votre nombre"
@@ -14,39 +16,35 @@
 *
 * * */
 
-
-
 // DECLARER LES ELEMENTS HTML
-const button = document.getElementById('input');
-const result = document.getElementById('result');
-const message = document.getElementById('msg');
+const button = document.getElementById('button');
 const debug = document.getElementById('debug');
+const output = document.getElementById('output');
 
-// DECLARER LA VARIABLE
+// DECLARER LES VARIABLE number, et _result
 let number = 0;
-// DECLARER LA VARIABLES RESULT
-let _result = 0;
+let result = 0;
 
 
 // RECUPERER LA VALEURE DE LA VARIABLE
 button.addEventListener('change', function () {
-    number = document.getElementById('input').value;
+    number = document.getElementById('button').value;
     console.log("Tu viens d'ecrire", number);
 })
 
 
-// CALCULER LE CARRÉ.
-message.addEventListener('click', function () {
-        _result = number * number;
-        console.log(_result);
+// CALCULER LE CARRE.
+output.addEventListener('click', function () {
+    result = number * number;
+    console.log(result);
 
     // AFFICHER LE RESULTAT
     result.classList.remove('hide');
-    document.getElementById("result").innerHTML=_result;
+    document.getElementById("result").innerHTML = result;
 })
 
 
 // AFFICHER LES VARIABLES
 debug.addEventListener('click', function () {
-    console.log(_result);
+    console.log(result);
 })
