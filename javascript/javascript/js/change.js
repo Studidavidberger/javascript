@@ -9,28 +9,27 @@
 // Attendre que le DOM est complement chargé
 document.addEventListener("DOMContentLoaded", function() {
     
-    // RECUPERER ELEMENT EXERCICES
+    // recuperer le bouton exercices
     const exercices = document.getElementById('exercices');
-    // RECUPERER VALEUR EXERCICES
-    let exercice = 1;
-    // RECUPERER L'ELEMENT SCRIPT
-    const script = document.getElementById('script');
     
+    // recuperer la valeur du bouton exercices
+    let exercice = 1;
+    let script = document.getElementById('script');
     
     // Ecouter les changement d'exercice
     exercices.addEventListener("change", function() {
         
-        // Initaliser variable MSG
+        document.getElementById('msg').innerHTML = "test reussi";
+
+        // Initaliser la variable message
         let msg = document.getElementById("exercices").innerHTML;
 
-        // CHANGER LE NUMERO OD'EXERCICE
+        // Modifier le repertoire script.
         exercice = Number(exercices.value);
-
-        // CHANGER DE REPERTOIRE
         document.getElementById('script').src = `js/exo_${exercice}.js`;
         document.getElementById('opensource').src = `js/exo_${exercice}.js`;
         
-        // CHANGER LE MESSAGE DESCRIPTIF
+        // Changer le nom du message
         if ( exercice === 1 ) {document.getElementById('msg').innerHTML = "calculer le carré";}
         if ( exercice === 2 ) {document.getElementById('msg').innerHTML = "afficher la somme";}
         if ( exercice === 3 ) {document.getElementById('msg').innerHTML = "nombre pairs";}
@@ -53,9 +52,16 @@ document.addEventListener("DOMContentLoaded", function() {
         if ( exercice === 20 ) {document.getElementById('msg').innerHTML = "suite de Lucas généralisée jusqu'à ce nombre";}
         alert(`
                 Exercice ${exercice}\n
-                repertoire du script ${script.src}\n
+                script ${script.src}\n
                 
          `);
+        // PROBLEME 1
+        // dans la condition IF, exercice n'est pas un entier
+        // SOLUTION 1
+        // voir le type de variable
+        // console.log( typeof exercice );
+        // puis convertir exercice en un entier
+        
             console.log(`
                 msg= ${ msg }
                 msg typeof = ${ typeof msg }\n
@@ -65,21 +71,17 @@ document.addEventListener("DOMContentLoaded", function() {
         `)
 
     })
-})
     // ON CLICK LISTENER
-
-
+    
+    // Affichier toutes les variables a lecran
+    const debug = document.getElementById('debug');
+    debug.addEventListener('click', function() {
+        alert(`
+                msg= ${ msg.innerHTML }
+                msg typeof = ${ typeof msg }\n
+                exercice = ${ exercice }
+                exercice typeof = ${ typeof exercice }
+        `)
+    })
+})
 //DOM LOADED
-
-/*
-*         // PROBLEME 1
-        // dans la condition IF, exercice n'est pas un entier
-        // SOLUTION 1
-        // voir le type de variable
-        // console.log( typeof exercice );
-        // puis convertir exercice en un entier
-        // Number( exercice )
-
-*
-*
-* */

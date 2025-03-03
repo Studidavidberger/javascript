@@ -28,7 +28,10 @@ document.addEventListener("DOMContentLoaded", function() {
         exercice = Number(exercices.value);
         document.getElementById('script').src = `js/exo_${exercice}.js`;
         document.getElementById('opensource').src = `js/exo_${exercice}.js`;
-        
+
+        // Recharger le DOM ( et le script )
+        window.location.reload(true);
+
         // Changer le nom du message
         if ( exercice === 1 ) {document.getElementById('msg').innerHTML = "calculer le carré";}
         if ( exercice === 2 ) {document.getElementById('msg').innerHTML = "afficher la somme";}
@@ -61,7 +64,8 @@ document.addEventListener("DOMContentLoaded", function() {
         // voir le type de variable
         // console.log( typeof exercice );
         // puis convertir exercice en un entier
-        
+
+
             console.log(`
                 msg= ${ msg }
                 msg typeof = ${ typeof msg }\n
@@ -85,3 +89,5 @@ document.addEventListener("DOMContentLoaded", function() {
     })
 })
 //DOM LOADED
+function reloadpage () {
+}

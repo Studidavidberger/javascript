@@ -42,9 +42,6 @@ box.addEventListener('click', function () {
     }
 })
 
-let form = new FormData;
-let map = new Map(salut, a, tous);
-
 
 const boutonAjout = document.getElementById('ajout');
 const liste = document.getElementById('items');

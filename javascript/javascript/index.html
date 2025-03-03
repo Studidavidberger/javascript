@@ -14,20 +14,20 @@
 <div id="exo1"></div>
 
 <!-- CALCULATRICE -->
+<form class="calculatrice container" action="">
 
     <!-- NOMBRE QUE L'UTILISATEUR SOUHAITE CALCULER -->
-    <input class="characters" type="number" id="input" placeholder="Entrez le premier nombre">
-    <input class="characters" type="number" id="input2" placeholder="Entrez le deuxieme nombre">
+    <input class="characters" type="number" id="mario" placeholder="Entrez le premier nombre">
+    <input class="characters" type="number" id="luigi" placeholder="Entrez le deuxieme nombre">
 
     <div class="container">
+        <p id="dodamathbutton"  class="button">Résultat</p>
         <input id="exercices" min="1" max="20" class="characters" type="number" placeholder="Exercice numero 1-20">
-        // LE RESULTAT N'APPARAIT PAS LORS DU CLICK
-        <div class="hide characters" id="result">result</div>
+        <div class="hide characters" id="toad">result</div>
     </div>
     </div>
     <p id="msg" class="button">Calculer le carré</p>
-    <iframe id="opensource" src="js/exo_1.js"></iframe>
-
+    <iframe id="opensource" src="js/demo_01.js"></iframe>
 
     <div class="container">
         <span>ici on peut retrouver le synopsis de chaque exercice</span>
@@ -61,10 +61,11 @@
     <small> website created my David BERGER <br>
         with lemons coffee and a lot of nightcore.</small>
 
+</form>
 
-<script src="js/script.js"></script>
-<script src="js/calc.js"></script>
-<script id="script" src="js/exo_2.js"></script>
+
+<script src="js/change.js"></script>
+<script id="script" src="js/calc.js"></script>
 
 
 </body>
