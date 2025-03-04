@@ -13,10 +13,11 @@
 * number = INPUT "Entrez votre nombre"
 *
 * IF calc is clicked
-*   result = index mod 10
 *   WHILE index is less of equal to number
 * {
-*      IF  = 0, 2, 4, 6, ou 8
+*       result = index mod 10
+*
+*       IF result = 0, 2, 4, 6, or 8
 *           PRINT index
 *           index = index + 1
 *       ELSE
