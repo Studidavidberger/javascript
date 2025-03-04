@@ -15,11 +15,10 @@
 * IF calc is clicked
 *   WHILE index is less of equal to number
 * {
-*       result = index mod 10
+*       result = index mod 2
 *
 *       IF result = 0, 2, 4, 6, or 8
 *           PRINT index
-*           index = index + 1
 *       ELSE
 *           index = index + 1
 * }
@@ -49,18 +48,16 @@ let index = 0;
     
 // CALCULER TOUT LES NOMBRES PAIRS..
     calc.addEventListener('click', function () {
-        index = number % 10;
+        index = number % 2;
         while ( index <= number ) {
-            if ( index )
-            console.log( number );
+            if ( index === 0 || 2 || 4 || 6 || 8 )
+            {
+                console.log("index=", index );
+                index = index + 1;
+            }
+            index = index + 1;
 
         }
-
-
-
-        // AFFICHER LE RESULTAT
-        output.classList.remove('hide');
-        document.getElementById("output").innerHTML = result;
     })
 
 
